@@ -1,0 +1,265 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+
+.header{
+    display:flex;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; /*Stay on top ALWAYS*/
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 125px;
+    background: linear-gradient(to right, var(--darkercream), var(--cream));
+}
+
+@keyframes point{
+    0% { transform: translate(0px, 0px)}
+    50% { transform: translate(-30px, 0px)}
+    100% { transform: translate(0px, 0px)}
+}
+
+.header .animate{
+    background-color: transparent;
+    z-index: -1;
+    display:inline;
+    position: absolute;
+    align-items: center;
+    animation: point 2s infinite;
+    margin-left: 120px;
+}
+
+.invisible{
+    display:none;
+}
+
+.header button::after{
+    /*Janky fix/number wag nalang galawin for header buttons specific*/
+    height: 33px;
+}
+
+.header h1{
+    max-width: 250px;
+}
+
+.header h4, .header button{
+    margin: 0;
+}
+
+.header h4{
+    font-size: 1.5rem;
+}
+
+.header button{
+    padding: 5px 10px;
+    height: 35px;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+.header .createButton{
+    position:absolute;
+    right:800px;
+    top: 45px;
+}
+
+.header h1{
+    font-size: 3rem;
+}
+
+.header .profile{
+    display:flex;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    left: 75px;
+}
+
+
+.cardsContainer{
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+}
+
+.goback{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.goback h1{
+    background-color: var(--cream);
+    padding:10px;
+    border: solid 2px black;
+    border-radius: 8px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.594);
+}
+
+.codewrapper p{
+    font-size: 1.25rem;
+    margin: 0px;
+}
+.codewrapper{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 5px;
+    padding: 5px;
+}
+
+/*Custom Linking for phone only*/
+.phoneCode{
+    display:none;
+}
+
+.codetitle{
+    font-family: 'Magilio', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.spacecode{
+    font-family: Arial, Helvetica, sans-serif;
+    border:2px black solid;
+    padding: 5px 15px;
+    border-radius: 25px;
+    text-align: center;
+    cursor:pointer;
+    margin: 0px;
+}
+
+@media(max-width:1366px){
+    .cardsContainer{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .header .createButton{
+        right: 320px;
+    }
+}
+
+@media(max-width: 768px){
+    .header h1{
+        margin-left: 0px;
+        font-size: 1.7rem;
+        max-width: 150px;
+        max-height:150px;
+    }    
+    .header button{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .header button::after{
+        /*Janky fix/number wag nalang galawin for header buttons specific*/
+        height: 20px;
+    }
+    .header .profile{
+        left:5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header .createButton{
+        position:absolute;
+        right:270px;
+        top:50px;
+    }
+    .header .logout button{
+        font-size: 1rem;
+        width: 70px;
+        font-weight: bold;
+        margin-left:0px;
+    }
+    .center{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .createButton .animate{
+        font-size: 1rem;
+    }
+    .cardsContainer{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .cardsContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header h1{
+        margin-left: 0px;
+        font-size: 1.5rem;
+        max-width: 150px;
+        max-height:150px;
+    }    
+    
+    .header button{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .header button::after{
+        /*Janky fix/number wag nalang galawin for header buttons specific*/
+        height: 20px;
+    }
+    .header .profile{
+        left:5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header .createButton{
+        position:absolute;
+        right:120px;
+        top:50px;
+    }
+
+    .header .logout button{
+        font-size: 1rem;
+        width: 70px;
+        font-weight: bold;
+        margin-left:0px;
+    }
+    .center{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .createButton .animate{
+        font-size: 1rem;
+    }
+
+    /*If on phone show custom and hide default*/
+    .codewrapper p, .codewrapper h5{
+        display:none;
+    }
+    .phoneCode{
+        display:block;
+        font-size: 1rem;
+        position:absolute;
+        right:5px;
+        top:5px;
+        font-family: Arial, Helvetica, sans-serif;
+
+        padding: 2px 10px;
+        border-radius: 25px;
+        text-align: center;
+        cursor:pointer;
+        margin: 0px;
+    }
+
+    
+}

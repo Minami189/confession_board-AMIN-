@@ -1,0 +1,65 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    background-color: var(--cream);
+    padding: 15px;
+    border-radius: 5px;
+    border: solid 2px black;
+    box-shadow: 10px 10px black;
+}
+
+.codeForm{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.codeForm input{
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 0px;
+    max-lines: 5;
+    background-color: rgba(223, 210, 157, 0.855);
+    border:none;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+
+.codeForm button{
+    margin-top: 0px;
+}
+
+.codeForm .createspace{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.spacecontrol{
+    display: flex;
+    gap:25px;
+}
+
+@media(max-width: 768px){
+    button{
+        padding: 0 25px;
+    }
+    .codeForm button{
+        width: 200px;
+    }
+}
+  
+@media (max-width: 1024px) {
+    
+}
+  
+@media(max-width: 1280px){
+  
+}

@@ -1,0 +1,169 @@
+
+
+.main{
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+.title{
+  padding: 0;
+  margin: 0;
+  font-size: 7rem;
+}
+
+.subtitle{
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  margin-top: 25px;
+  align-items: center;
+  background-color: hsl(49, 37%, 81%);
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: "Helvetica";
+  font-size: 20px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+button:hover:after {
+  transform: translate(0, 0);
+}
+
+button:active {
+  background-color: hsl(49, 37%, 75%);
+  outline: 0;
+}
+
+button:hover {
+  outline: 0;
+}
+
+.cards{
+  position:relative;
+  width:100vw;
+
+}
+
+.card1{
+  display:inline;
+  position:absolute;
+  top:-150px;
+  left:300px;
+  rotate: 5deg;
+}
+
+.card2{
+  display:inline;
+  position:absolute;
+  top:-200px;
+  right:150px;
+  rotate: -15deg;
+}
+
+.card3{
+  display:inline;
+  position:absolute;
+  top:190px;
+  right:350px;
+  rotate: -5deg;
+}
+
+.card4{
+  display:inline;
+  position:absolute;
+  top:220px;
+  left:450px;
+  rotate: 10deg;
+}
+
+
+@media (max-width: 1024px) {
+  button {
+    padding: 0 40px;
+  }
+  .card1{
+    top:-250px;
+    left:50px;
+  }
+  .card2{
+    top:250px;
+    right:25px;
+  }
+  .card3{
+    top:-250px;
+    right:30px;
+  }
+  .card4{
+    top:250px;
+    left:25px;
+  }
+  
+}
+
+/*Mobile Phone*/
+@media(max-width: 768px){
+  button {
+    padding: 0px;
+    font-size: 1rem;
+    height: 35px;
+    width: 160px;
+  }
+  button::after{
+    height: 35px;
+  }
+  .title{
+      font-size: 3.5rem;
+  }
+  .subtitle{
+     font-size: 1.2rem;
+  }
+  .card1{
+    top:-250px;
+    left:50px;
+  }
+  .card2{
+    top:200px;
+    right:25px;
+  }
+  .card3{
+    top:-200px;
+    right:30px;
+  }
+  .card4{
+    top:200px;
+    left:25px;
+  }
+}
+

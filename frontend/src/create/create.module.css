@@ -1,0 +1,71 @@
+.editor{
+    height: 500px;
+    width: 400px;
+    background: linear-gradient(to bottom, var(--darkercream), var(--cream));
+    border-radius: 15px;
+    border: solid 5px hsl(49, 37%, 75%);
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    box-shadow: -5px 10px hsla(0, 0%, 0%, 0.522);
+    overflow:hidden;
+    align-items: center;
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content{
+    font-family: "Inter", serif;
+    font-size: 2rem;
+    user-select: none;
+    background-color: transparent;
+    border:none;
+    width:90%;
+    height:100%;
+    resize:none;
+    user-select: none;
+    overflow:auto;
+}
+
+.buttons{
+    display:flex;
+    gap:50px;
+}
+
+.content::-webkit-scrollbar {
+    width: 0; 
+    height: 0; 
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.cardTitle{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 2.5rem;
+    font-family: 'Magilio';
+    background-color: hsl(49, 30%, 65%);
+    user-select: none;
+    border:none;
+}
+
+@media(max-width: 768px){
+    .editor{
+        width:100vw;
+    }
+}

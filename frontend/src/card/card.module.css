@@ -1,0 +1,119 @@
+.cardBody{
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, hsl(49, 37%, 81%), hsl(49, 32%, 85%));
+    border: solid hsl(49, 37%, 75%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    box-shadow: -5px 10px hsla(0, 0%, 0%, 0.522);
+    overflow-wrap: break-word;
+}
+
+.content{
+    font-family: "Inter", serif;
+    font-size: 1rem;
+    user-select: none;
+    background-color: transparent;
+    border:none;
+    width:90%;
+    height:90%;
+    resize: vertical;
+    resize:none;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.cardBody button::after{
+    display:none;
+}
+
+.cardBody button{
+    font-size: 1rem;
+    background-color: transparent;
+    width:1rem;
+    height:1rem;
+    border:none;
+    padding:0px;
+    margin:0px;
+}
+
+.liked{
+    color: var(--darkerblue);
+}
+
+.liking{
+    margin-top:15px;
+    display:flex;
+    width:100%;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+}
+
+.liking p{
+    padding: 0px;
+    margin: 0px;
+    font-family: "roboto";
+    font-size: 1.2rem;
+}
+
+
+.liking button:hover{
+    transition: color 150ms ease-in-out;
+    color: var(--blue);
+}
+
+
+.content::-webkit-scrollbar {
+    width: 0; 
+    height: 0; 
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.cardTitle{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 1280px){
+    .cardBody{
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media(max-width: 1024px){
+    .cardTitle{
+        font-size: 2rem;
+    }
+    .content{
+        font-size:1.25rem;
+    }
+}
+
+/*Mobile Phone*/
+@media (max-width:768px) {
+    .cardBody{
+        width: 140px;
+        height: 170px;
+    }
+    .cardTitle{
+        font-size: 1.25rem;
+    }
+    .content{
+        font-size:.8rem;
+    }
+}
