@@ -11,7 +11,7 @@ function Home(){
         "Oy, kayo ah reminder lang. Wag naman sana kayo maglagay ng explicit content dito ah, baka kung ano ano na sabihin niyo dito porke anonymous kayo",
         "Sana matapos ng developer yung website na toh bago mag feb 14 para sakto. Kung nakkita nyo ngayon toh at di pa feb 14 edi nice"
     ]
-
+    console.log("test");
     return(
     <div className={styles.main}>
 
@@ -26,7 +26,7 @@ function Home(){
         <h2 className={styles.subtitle}>Anonymous Messaging In Network</h2>
 
         <button className={styles.button} onClick={()=>navigate("/login")}>Start Now</button> 
-
+        
         
 
 

@@ -21,7 +21,7 @@ function Public(){
     
     async function getCards(spaceid) {
         const token = localStorage.getItem("token");
-    
+        
         const result = await fetch(`${process.env.REACT_APP_BACKEND_URL}/card/${spaceid}`, {
             method: "GET",
             headers: {
