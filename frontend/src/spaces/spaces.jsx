@@ -13,6 +13,7 @@ function Spaces(){
     const navigate = useNavigate();
     
     useEffect(()=>{
+        console.log("trigger");
         if(localStorage.getItem("token")){
             setLogged(true);
         }
