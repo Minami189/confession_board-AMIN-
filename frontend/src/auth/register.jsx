@@ -10,7 +10,7 @@ function Register(){
     async function handleRegister(){
         const username = usernameInput.current.value;
         const password = passwordInput.current.value;
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/register`,{
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/register`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({username: username, password: password}),

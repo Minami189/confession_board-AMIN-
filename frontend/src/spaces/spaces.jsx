@@ -32,7 +32,7 @@ function Spaces(){
     }
     
     async function fetchSpace(spaceCode){
-        const result = await fetch(`${process.env.REACT_APP_BACKEND_URL}/space/${spaceCode}`, {
+        const result = await fetch(`${import.meta.env.VITE_BACKEND_URL}/space/${spaceCode}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,

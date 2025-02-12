@@ -36,7 +36,7 @@ function Create(){
     
         const spaceID = jwtDecode(spacetoken).spaceid;
     
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/card/${spaceID}`, {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/card/${spaceID}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`, // Include token
