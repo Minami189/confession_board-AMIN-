@@ -58,7 +58,7 @@ function Spaces(){
 
     async function createSpace(){
         const code = generateRandomCode();
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/space/${code}`, {
+        const response = await fetch(`http://localhost:5000/space/${code}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
