@@ -31,7 +31,7 @@ function Spaces(){
     }
     
     async function fetchSpace(spaceCode){
-        const result = await fetch(`http://localhost:5000/space/${spaceCode}`, {
+        const result = await fetch(`${process.env.REACT_APP_BACKEND_URL}/space/${spaceCode}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -58,7 +58,7 @@ function Spaces(){
 
     async function createSpace(){
         const code = generateRandomCode();
-        const response = await fetch(`http://localhost:5000/space/${code}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/space/${code}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,

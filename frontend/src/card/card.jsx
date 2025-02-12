@@ -17,7 +17,7 @@ function Card({author, content, cardid, likes}){
         const token = localStorage.getItem("token");
         const uid = jwtDecode(token).id;
     
-        const result = await fetch(`http://localhost:5000/likes/${cardid}`, {
+        const result = await fetch(`${process.env.REACT_APP_BACKEND_URL}/likes/${cardid}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`, // Include token
@@ -42,7 +42,7 @@ function Card({author, content, cardid, likes}){
         setLiked(!isLiked);
         setCount(newLikeCount);
     
-        const response = await fetch(`http://localhost:5000/${endpoint}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/${endpoint}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${token}`, // Include token

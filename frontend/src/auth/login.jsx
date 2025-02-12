@@ -14,7 +14,7 @@ function Login(){
         if(username.length <= 0){
            return setMsg("Must enter username");
         }
-        const response = await fetch("http://localhost:5000/login",{
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/login`,{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({username: username, password: password}),
