@@ -2,14 +2,14 @@ import styles from './card.module.css';
 import React, {useState, useEffect} from "react";
 import { jwtDecode } from 'jwt-decode';
 
-function Card({author, content, cardid, likes}){
+function Card({author, content, cardid, likes, disable}){
     const [likeCount, setCount] = useState(likes);
     const [isLiked, setLiked] = useState(false);
     
     //on mount set the liked status
     useEffect(()=>{
         
-        fetchLikes();
+        disable ? "" : fetchLikes() ;
     },[])
 
 

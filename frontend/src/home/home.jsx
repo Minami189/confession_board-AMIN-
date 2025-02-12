@@ -16,10 +16,10 @@ function Home(){
     <div className={styles.main}>
 
         <div className={styles.cards}>
-            <div className={styles.card1}><Card author="Anonymous" content={contents[0]}></Card></div>
-            <div className={styles.card2}><Card author="Izumi" content={contents[1]}></Card></div>
-            <div className={styles.card3}><Card author="Yuki" content={contents[2]}></Card></div>
-            <div className={styles.card4}><Card author="Bogart" content={contents[3]}></Card></div>
+            <div className={styles.card1}><Card author="Anonymous" content={contents[0]} disable={true}></Card></div>
+            <div className={styles.card2}><Card author="Izumi" content={contents[1]} disable={true}></Card></div>
+            <div className={styles.card3}><Card author="Yuki" content={contents[2]} disable={true}></Card></div>
+            <div className={styles.card4}><Card author="Bogart" content={contents[3]} disable={true}></Card></div>
         </div>
         
         <h1 className={styles.title}>A.M.I.N.</h1>
