@@ -13,7 +13,7 @@
 }
 
 .content{
-    font-family: "Inter", serif;
+    font-family: "Inter", sans-serif;
     font-size: 1rem;
     user-select: none;
     background-color: transparent;
@@ -59,13 +59,6 @@
     font-family: "roboto";
     font-size: 1.2rem;
 }
-
-
-.liking button:hover{
-    transition: color 150ms ease-in-out;
-    color: var(--blue);
-}
-
 
 .content::-webkit-scrollbar {
     width: 0; 
