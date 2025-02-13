@@ -66,7 +66,7 @@ function Card({author, content, cardid, likes, disable}){
             <div className={styles.content}>{content}</div>
 
             <div className={styles.liking}>
-                <button onClick={()=>handleLiked()}><Heart color={isLiked ? "hsl(194, 50%, 50%)" : "black"}/></button>
+                <button onClick={()=>handleLiked()}><Heart key={isLiked} color={isLiked ? "hsl(194, 50%, 50%)" : "black"}/></button>
                 <p>{likeCount||0}</p>
             </div>
 

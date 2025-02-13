@@ -1,8 +1,8 @@
 import styles from './card.module.css';
 
-function heart({color}){
+function Heart({color}){
     return(
-        <svg viewBox="0 0 16 16" fill={color} xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 16 16" width="16" height="16" fill={color} xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
             </g>
             <g id="SVGRepo_iconCarrier"> 
@@ -10,4 +10,4 @@ function heart({color}){
     )
 }
 
-export default heart;
+export default Heart;
