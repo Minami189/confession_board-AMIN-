@@ -16,7 +16,7 @@ export async function registerUser(req, res) {
 
     try {
         const [existingUser] = await pool.query("SELECT username FROM user WHERE username = ?", [username]);
-        if (existingUser.length > 0) return res.status(409).json({ message: `Username ${username} already exists` });
+        if (existingUser.length > 0) return res.json({ message: `Username ${username} already exists` });
 
         const hashedPassword = await bcrypt.hash(password, 10);
         await pool.query("INSERT INTO user(username, password) VALUES(?, ?)", [username, hashedPassword]);
