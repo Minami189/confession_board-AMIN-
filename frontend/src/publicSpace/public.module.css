@@ -137,7 +137,7 @@
     margin: 0px;
 }
 
-@media(max-width:1366px){
+@media(max-width:1440px){
     .cardsContainer{
         grid-template-columns: repeat(4, 1fr);
     }
