@@ -63,10 +63,13 @@
     margin-left: 20px;
 }
 
+.phoneback{
+    display:none;
+}
+
 .header .createButton{
-    position:absolute;
-    right:800px;
-    top: 45px;
+    padding: 5px 10px;
+    margin: 0px;
 }
 
 .header h1{
@@ -137,16 +140,23 @@
     margin: 0px;
 }
 
+.center{
+    display: flex;
+    align-items: center;
+}
+
+.backbutton{
+    cursor:pointer;
+    
+}
+
 @media(max-width:1440px){
     .cardsContainer{
         grid-template-columns: repeat(4, 1fr);
     }
-    .header .createButton{
-        right: 320px;
-    }
 }
 
-@media(max-width: 768px){
+@media(max-width: 820px){
     .header h1{
         margin-left: 0px;
         font-size: 1.7rem;
@@ -169,11 +179,6 @@
         align-items: center;
         text-align: center;
     }
-    .header .createButton{
-        position:absolute;
-        right:270px;
-        top:50px;
-    }
     .header .logout button{
         font-size: 1rem;
         width: 70px;
@@ -190,6 +195,15 @@
     }
     .cardsContainer{
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .header .backbutton{
+        display:none;
+    }
+
+    .phoneback{
+        display:block;
+        margin-right: 10px;
     }
 }
 
@@ -221,11 +235,6 @@
         text-align: center;
     }
 
-    .header .createButton{
-        position:absolute;
-        right:120px;
-        top:50px;
-    }
 
     .header .logout button{
         font-size: 1rem;
@@ -260,6 +269,15 @@
         cursor:pointer;
         margin: 0px;
     }
+    .header .createButton{
+        margin-left: 10px;
+    }
+    .header .backbutton{
+        display:none;
+    }
 
-    
+    .phoneback{
+        display:block;
+        margin-right: 10px;
+    }
 }

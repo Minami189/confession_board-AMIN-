@@ -4,7 +4,7 @@ import { jwtDecode} from 'jwt-decode';
 import React, {useEffect, useState } from 'react';
 import Logout from '../logout.jsx';
 import {useNavigate} from 'react-router-dom';
-
+import Back from './back.jsx';
 
 function Public(){
     
@@ -72,24 +72,30 @@ function Public(){
         return(
             <div className={styles.main}>
                 <div className={styles.header}>
-                    <div className={styles.profile}>
-                        <h4>{username}</h4>
-                        <div className={styles.logout}><Logout/></div>
+                        <div className={styles.profile}>
+                            <h4>{username}</h4>
+                            <div className={styles.logout}><Logout/></div>
+                        </div>
+
+                    <div className={styles.center}>
+                        <button className={styles.backbutton} onClick={()=>navigate('/spaces')}>
+                            <Back/>
+                        </button>
+                        <div className={styles.phoneback} onClick={()=>navigate('/spaces')}><Back/></div>
+                        
+                        <h1>{spaceName}</h1>
+                        
+                        <button className={styles.createButton} onClick={()=>{navigate("/create")}}>
+                            +
+                            <h4 onClick={(event)=>{event.stopPropagation(); setTooltip(false);}} className={tooltip ? styles.animate : styles.invisible}>👈</h4>
+                        </button>
                     </div>
 
-                <div className={styles.center}>
-                    <h1>{spaceName}</h1>
-                    
-                    <button className={styles.createButton} onClick={()=>{navigate("/create")}}>
-                        +
-                    <h4 onClick={(event)=>{event.stopPropagation(); setTooltip(false);}} className={tooltip ? styles.animate : styles.invisible}>👈</h4>
-                    </button>
-                </div>
-                    <div className={styles.codewrapper}>
-                        <h5 className={styles.codetitle}>Code</h5>
-                        <p onClick={handleCopy}className={styles.spacecode}>{code}</p>
-                    </div>
-                    <p onClick={handleCopy}className={styles.phoneCode}>{code}</p>
+                        <div className={styles.codewrapper}>
+                            <h5 className={styles.codetitle}>Code</h5>
+                            <p onClick={handleCopy}className={styles.spacecode}>{code}</p>
+                        </div>
+                        <p onClick={handleCopy}className={styles.phoneCode}>{code}</p>
                 </div>
 
                 <div className={styles.cardsContainer}>

@@ -5,5 +5,4 @@ dotenv.config();
 const urlDB = process.env.RAILWAY_DATABASE_URL;
 const pool = mysql.createPool(urlDB).promise();
 
-
 export default pool;
