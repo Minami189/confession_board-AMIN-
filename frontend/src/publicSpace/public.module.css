@@ -148,7 +148,7 @@
 
 .header .backbutton{
     cursor:pointer;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 @media(max-width:1440px){
