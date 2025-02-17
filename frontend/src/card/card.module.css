@@ -88,14 +88,6 @@
     }
 }
 
-@media(max-width: 1024px){
-    .cardTitle{
-        font-size: 2rem;
-    }
-    .content{
-        font-size:1.25rem;
-    }
-}
 
 /*Mobile Phone and smaller devices*/
 @media (max-width:970px) {
