@@ -218,9 +218,9 @@
     }
 }
 
-@media(max-width: 720px){
+@media(max-width: 600px){
     .cardsContainer{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .header h1{
         margin-left: 0px;
@@ -290,5 +290,11 @@
     .phoneback{
         display:block;
         margin-right: 10px;
+    }
+}
+
+@media(max-width: 550px){
+    .cardsContainer{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
