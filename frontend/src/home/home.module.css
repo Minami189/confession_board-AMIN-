@@ -109,24 +109,24 @@ button:hover {
 }
 
 
-@media (max-width: 1366px) {
+@media (max-width: 1600px) {
   button {
     padding: 0 40px;
   }
   .card1{
-    top:-250px;
+    top:-200px;
     left:50px;
   }
   .card2{
-    top:250px;
+    top:200px;
     right:25px;
   }
   .card3{
-    top:-250px;
+    top:-200px;
     right:30px;
   }
   .card4{
-    top:250px;
+    top:200px;
     left:25px;
   }
   

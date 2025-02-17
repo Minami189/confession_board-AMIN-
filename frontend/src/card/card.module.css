@@ -81,7 +81,7 @@
     margin-bottom: 5px;
 }
 
-@media(max-width: 1366px){
+@media(max-width: 1600px){
     .cardBody{
         width: 200px;
         height: 250px;
