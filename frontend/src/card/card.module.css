@@ -97,8 +97,8 @@
     }
 }
 
-/*Mobile Phone*/
-@media (max-width:768px) {
+/*Mobile Phone and smaller devices*/
+@media (max-width:970px) {
     .cardBody{
         width: 140px;
         height: 170px;
