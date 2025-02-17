@@ -151,13 +151,14 @@
     margin-right: 20px;
 }
 
-@media(max-width:1600px){
+@media(max-width:1500px){
     .cardsContainer{
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media(max-width:1450px){
+
+@media(max-width:1250px){
     .cardsContainer{
         grid-template-columns: repeat(4, 1fr);
     }
