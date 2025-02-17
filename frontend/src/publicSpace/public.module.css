@@ -212,6 +212,10 @@
         display:block;
         margin-right: 10px;
     }
+
+    .codewrapper p, .codewrapper h5{
+        font-size: .8rem;
+    }
 }
 
 @media(max-width: 600px){
