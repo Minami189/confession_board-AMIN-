@@ -219,7 +219,7 @@
     }
 }
 
-@media(max-width: 720px){
+@media(max-width: 730px){
     .cardsContainer{
         grid-template-columns: repeat(3, 1fr);
     }
